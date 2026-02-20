@@ -92,10 +92,11 @@ public class CampeonatoService {
                 .filter(r -> ids.contains(r.getIdDeportista()))
                 .toList();
     }
-    // Países participantes
+    // Paises participantes
     public Set<String> paisesParticipantes() {
         return deportistaRepo.listAll().stream()
                 .map(Deportista::getPais)
                 .collect(Collectors.toSet());
     }
+
 }
